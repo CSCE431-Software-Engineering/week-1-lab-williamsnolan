@@ -1,2 +1,8 @@
-<h1>Books#edit</h1>
-<p>Find me in app/views/books/edit.html.erb</p>
+<h1>Edit Book</h1>
+
+<%= form_for(@book) do |f|%>
+<h3>Title:</h3>
+<%= f.text_field(:title)%>
+
+<%= f.submit("Edit Book")%>
+<%end%>

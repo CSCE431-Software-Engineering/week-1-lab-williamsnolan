@@ -8,9 +8,22 @@ Rails.application.routes.draw do
 
 
   get 'main/index'
-  get 'books/index'
-  get 'books/new'
-  get 'books/edit'
+
+
+  resources :books do
+    member do
+      get :delete
+    end
+  end
+  
+
+
+  # get 'books/index'
+  # get 'books/new'
+  # get 'books/edit'
+  # get 'books/show'
+  # get 'books/delete'
+
 
   # Defines the root path route ("/")
   # root "articles#index"

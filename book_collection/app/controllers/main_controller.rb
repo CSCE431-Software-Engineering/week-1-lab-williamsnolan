@@ -1,10 +1,10 @@
 class MainController < ApplicationController
   def index
+    @books = Book.order(:title)
   end
 
   def about
-    @id = params['id']
-    @page = params[:page]
+
   end
 
 end
